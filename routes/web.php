@@ -15,7 +15,8 @@ use App\Http\Middleware\UserMiddleware;
 
 // Login routes
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+
 
 // Register routes
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register.form');
