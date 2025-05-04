@@ -15,7 +15,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">Pengajuan</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Kegiatan</a></li>
+                        <li><a class="dropdown-item" href="user/userkegiatan">Kegiatan</a></li>
                         <li><a class="dropdown-item" href="#">Kunjungan</a></li>
                     </ul>
                 </li>

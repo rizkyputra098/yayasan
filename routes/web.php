@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\KegiatanController;
 use App\Http\Controllers\Admin\KeseluruhanDataController;
 use App\Http\Controllers\Admin\KunjunganController;
 use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\User\UserKegiatanController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\UserMiddleware;
 
@@ -24,7 +25,7 @@ Route::post('/register', [AuthController::class, 'register'])->name('register');
 
 // Logout route
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
+Route::get('/home', [UserController::class, 'index'])->name('home');
 // Group routes yang memerlukan autentikasi
 Route::middleware(['auth'])->group(function () {
 
@@ -50,6 +51,7 @@ Route::middleware(['auth'])->group(function () {
         ->name('user.')
         ->middleware([UserMiddleware::class])
         ->group(function () {
-            Route::get('/home', [UserController::class, 'index'])->name('home');
+            Route::get('/userkegiatan', [UserKegiatanController::class, 'index'])->name('userkegiatan');
+           
         });
 });
