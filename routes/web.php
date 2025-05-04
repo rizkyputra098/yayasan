@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\KeseluruhanDataController;
 use App\Http\Controllers\Admin\KunjunganController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\User\UserKegiatanController;
+use App\Http\Controllers\User\UserKunjunganController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\UserMiddleware;
 
@@ -52,6 +53,7 @@ Route::middleware(['auth'])->group(function () {
         ->middleware([UserMiddleware::class])
         ->group(function () {
             Route::get('/userkegiatan', [UserKegiatanController::class, 'index'])->name('userkegiatan');
+            Route::get('/userkunjungan', [UserKunjunganController::class, 'index'])->name('userkunjungan');
            
         });
 });

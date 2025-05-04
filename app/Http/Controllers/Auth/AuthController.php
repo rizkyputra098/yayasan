@@ -38,7 +38,7 @@ class AuthController extends Controller
     
         return $user->is_admin
             ? redirect()->route('admin.dashboard')
-            : redirect()->route('user.home');
+            : redirect()->route('home');
     }
     
     // Proses logout
